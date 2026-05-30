@@ -1,5 +1,4 @@
 from fuel import checks
-import pytest
 
 def test_checks():
     assert checks("1/2") == "50%"
@@ -7,6 +6,6 @@ def test_checks():
     assert checks("3/4") == "75%"
     assert checks("1/100") == "E"
     assert checks("99/100") == "F"
-    assert checks("2/1") == False
-    assert checks("1/0") == False
-    assert checks("abc") == False
+    assert checks("2/1") is False
+    assert checks("1/0") is False
+    assert checks("abc") is False
